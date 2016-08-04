@@ -1,0 +1,9 @@
+[{
+  "NAME": "Current File",
+  "BIN": "/usr/local/bin/node",
+  "ENV_VARIABLES": {}
+}, {
+  "NAME": "Package",
+  "BIN": "/usr/local/bin/node",
+  "CMD": ""
+}]

@@ -1,0 +1,27 @@
+{
+  "name": "atom-bugs",
+  "version": "0.0.1",
+  "description": "A Simple Javascript Debugger for Atom",
+  "keywords": [
+    "javascript",
+    "debugger",
+    "node"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/willyelm/atom-bugs",
+  "main": "lib/main",
+  "engines": {
+    "atom": ">1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "standard": "^7.1.2"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "chromedriver": "^2.22.1",
+    "selenium-webdriver": "^2.53.3"
+  }
+}
