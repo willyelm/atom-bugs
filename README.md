@@ -1,4 +1,5 @@
 [![apm](https://img.shields.io/apm/v/atom-bugs.svg?style=flat-square)](https://atom.io/packages/atom-bugs)
+[![standard](https://img.shields.io/badge/code%20style-standard-yellow.svg?style=flat-square)](http://standardjs.com/)
 [![apm](https://img.shields.io/apm/l/atom-bugs.svg?style=flat-square)](https://github.com/willyelm/atom-bug/blob/master/LICENSE.md)
 
 Atom Bugs
