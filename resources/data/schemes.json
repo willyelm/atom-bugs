@@ -16,11 +16,16 @@
       },
       "env": {
         "type": "object",
+        "placeholder": {
+          "name": "name",
+          "value": "value"
+        },
         "title": "Enviroment Variables"
       },
       "arguments": {
-        "type": "list",
-        "title": "Enviroment Variables"
+        "type": "list",,
+        "placeholder": "Ex. --test=123",
+        "title": "Arguments"
       }
     }
   },
@@ -45,11 +50,16 @@
       },
       "env": {
         "type": "object",
+        "placeholder": {
+          "name": "name",
+          "value": "value"
+        },
         "title": "Enviroment Variables"
       },
       "arguments": {
         "type": "list",
-        "title": "Enviroment Variables"
+        "placeholder": "Ex. --test=123",
+        "title": "Arguments"
       }
     }
   },
