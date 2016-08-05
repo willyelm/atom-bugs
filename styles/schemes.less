@@ -1,0 +1,54 @@
+@import "variables";
+
+atom-bugs-schemes{
+  display: block;
+  margin: -10px;
+  .atom-bugs-project-selector {
+    padding: 10px;
+    .form-control {
+      margin-left: 5px;
+      width: 200px;
+      display: inline-block;
+    }
+  }
+  .atom-bugs-scheme-configurator {
+    padding: 10px;
+    width: 100%;
+  }
+  .atom-bugs-scheme-selector {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    .btn.active {
+      background-color: @accent-color;
+      background-image: none;
+      color: @text-color-selected;
+    }
+  }
+  .panels-menu {
+    border: 0;
+    maring: 0;
+    border-radius: 0!important;
+  }
+  .list-group-item {
+    background-color: transparent;
+    border-color: rgba(0,0,0, .2);
+  }
+  .form-control {
+    background-color: @input-background-color;
+    border-radius: @component-border-radius;
+    color: @text-color-highlight;
+    border: 1px solid @input-border-color;
+    &:focus{
+      background-color: @input-background-color-focus;
+      border-color: @accent-color;
+      box-shadow: none;
+    }
+    &::-webkit-input-placeholder {
+      color: rgba(255,255,255,.2)
+    }
+  }
+  form {
+    margin: 0 3em;
+  }
+}

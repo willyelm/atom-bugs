@@ -1,121 +1,52 @@
-@import "ui-variables";
-
-atom-bugs-schemes{
-  display: block;
-  margin: -10px;
-  .atom-bugs-scheme-configurator {
-    padding: 10px;
-    width: 100%;
-  }
-  .atom-bugs-scheme-selector {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    .btn.active {
-      background-color: @accent-color;
-      background-image: none;
-      color: @text-color-selected;
-    }
-  }
-  .panels-menu {
-    border: 0;
-    maring: 0;
-    border-radius: 0!important;
-  }
-  .list-group-item {
-    background-color: transparent;
-    border-color: rgba(0,0,0, .2);
-  }
-  .form-control {
-    background-color: @input-background-color;
-    border-radius: @component-border-radius;
-    color: @text-color-highlight;
-    border: 1px solid @input-border-color;
-    &:focus{
-      background-color: @input-background-color-focus;
-      .selection .region {
-        background-color: @input-selection-color-focus;
-      }
-    }
-  }
-}
-
-atom-bugs-console {
-  display: block;
-  pre {
-    padding: 0;
-    background-color: rgba(0,0,0,.13);
-    border-radius: 0;
-    -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -o-user-select: text;
-    user-select: text;
-    max-height: 200px;
-  }
-  input {
-    background-color: rgba(0,0,0,.26);
-    border: 0;
-    width: 100%;
-  }
-  .bugs-label{
-    border-radius: 2px;
-    padding: 1px 4px;
-    margin-right: 4px;
-    text-shadow: 0 0 1px rgba(0,0,0,.7);
-    box-shadow: 0 0 0 1px rgba(0,0,0,.2) inset;
-    &.bugs-label-info {
-      color: @text-color-selected;
-      background-color: @accent-color;
-    }
-    &.bugs-label-error {
-      color: @text-color-selected;
-      background-color: @text-color-error;
-    }
-    &.bugs-label-string {
-      color: @text-color-selected;
-      background-color: #E09B9B;
-    }
-    &.bugs-label-object {
-      color: @text-color-selected;
-      background-color: #F2DE9B;
-    }
-    &.bugs-label-boolean {
-      color: @text-color-selected;
-      background-color: #BAA7C7;
-    }
-    &.bugs-label-number {
-      color: @text-color-selected;
-      background-color: #9AB7D8;
-    }
-    &.bugs-label-function {
-      color: @text-color-selected;
-      background-color: #ACC8A7;
-    }
-  }
-  .bugs-line,
-  input {
-    padding: 5px;
-    border-top: 1px solid rgba(0,0,0, .2);
-    &:first-child {
-      &:not(:last-child) {
-        border-top: 0;
-      }
-    }
-  }
-}
+@import "variables";
 
 atom-bugs-panel {
   display: block;
+  input,
+  select {
+    -webkit-appearance: none;
+  }
+  .btn-select {
+    padding-left: 0;
+    padding-right: 0;
+    i {
+      position: absolute;
+      left: 7px;
+      top: 0;
+      z-index: 0;
+      & + select {
+        padding-left: 22px;
+      }
+    }
+    select {
+      padding-left: 10px;
+      padding-right: 22px;
+      background-color: transparent;
+      border: none;
+      height: 100%;
+      width: auto;
+      position: relative;
+      z-index: 2;
+    }
+    &:after {
+      z-index: 0;
+      content: '\46';
+      position: absolute;
+      right: 0;
+      line-height: 0;
+      right: 7px;
+      top: 50%;
+      font-family: 'bugs'
+    }
+  }
   box-shadow:
     0 1px 0 0 rgba(0,0,0, .2) inset,
     0 -1px 0 0 rgba(0,0,0, .2) inset;
   .btn-group {
     padding: 0.45rem;
-    padding-right: 0px;
-  }
-  .btn {
-    padding: 0 .65rem;
+    &:first-child {
+      padding-right: 0px;
+    }
   }
   .bugs-breadcrumb {
     background-color: @button-background-color;
@@ -128,8 +59,15 @@ atom-bugs-panel {
         border-left-color: @button-background-color-hover;
       }
     }
+    &[disabled] {
+      &:after,
+      &:before {
+        opacity: .65
+      }
+    }
     & + .btn {
-      padding-left: 12px;
+      padding-left: 14px;
+      border-left-color: transparent;
     }
     &:after,
     &:before {
@@ -150,12 +88,15 @@ atom-bugs-panel {
       border-left-color: @button-background-color;
     }
     &:before {
-      border-left-color: @ui-border;
+      border-left-color: rgba(0,0,0, .3);
       margin-left: 1px;
     }
   }
   .bugs-icon-play {
-    color: @text-color-success
+    color: @text-color-success;
+  }
+  .bugs-icon-stop {
+    color: @text-color-error;
   }
 }
 
@@ -182,129 +123,4 @@ atom-text-editor {
       left: 0;
     }
   }
-}
-
-@font-face {
-  font-family: "bugs";
-  src: url("atom://atom-bugs/resources/fonts/bugs.eot");
-  src: url("atom://atom-bugs/resources/fonts/bugs.eot?#iefix") format("embedded-opentype"),
-       url("atom://atom-bugs/resources/fonts/bugs.woff") format("woff"),
-       url("atom://atom-bugs/resources/fonts/bugs.ttf") format("truetype"),
-       url("atom://atom-bugs/resources/fonts/bugs.svg#streamline") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-i[class^="bugs-icon-"],
-i[class*=" bugs-icon-"] {
-  &:before {
-    display: inline-block;
-    font-family: "bugs" !important;
-    font-size: inherit;
-    font-style: normal;
-    text-rendering: auto;
-    vertical-align: bottom;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-}
-
-.bugs-icon-chrome:before {
-  content: "\61";
-}
-
-.bugs-icon-step-backward:before {
-  content: "\34";
-}
-
-.bugs-icon-step-forward:before {
-  content: "\35";
-}
-
-.bugs-icon-long-arrow-down:before {
-  content: "\36";
-}
-
-.bugs-icon-long-arrow-left:before {
-  content: "\37";
-}
-
-.bugs-icon-long-arrow-right:before {
-  content: "\38";
-}
-
-.bugs-icon-long-arrow-up:before {
-  content: "\39";
-}
-
-.bugs-icon-laptop:before {
-  content: "\21";
-}
-
-.bugs-icon-flask:before {
-  content: "\22";
-}
-
-.bugs-icon-file-code-o:before {
-  content: "\23";
-}
-
-.bugs-icon-desktop:before {
-  content: "\24";
-}
-
-.bugs-icon-circle-o:before {
-  content: "\25";
-}
-
-.bugs-icon-circle:before {
-  content: "\26";
-}
-
-.bugs-icon-bug:before {
-  content: "\27";
-}
-
-.bugs-icon-pause:before {
-  content: "\28";
-}
-
-.bugs-icon-play:before {
-  content: "\29";
-}
-
-.bugs-icon-archive:before {
-  content: "\2a";
-}
-
-.bugs-icon-bullseye:before {
-  content: "\2b";
-}
-
-.bugs-icon-map-signs:before {
-  content: "\2c";
-}
-
-.bugs-icon-random:before {
-  content: "\2d";
-}
-
-.bugs-icon-server:before {
-  content: "\2e";
-}
-
-.bugs-icon-tasks:before {
-  content: "\62";
-}
-
-.bugs-icon-terminal:before {
-  content: "\63";
-}
-
-.bugs-icon-firefox:before {
-  content: "\64";
-}
-
-.bugs-icon-safari:before {
-  content: "\65";
 }

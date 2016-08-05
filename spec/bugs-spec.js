@@ -1,10 +1,10 @@
 /* eslint-env jasmine */
 /* global atom, waitsForPromise */
 
-describe('One Dark UI theme', function () {
+describe('Atom Bugs', function () {
   beforeEach(function () {
     return waitsForPromise(function () {
-      return atom.packages.activatePackage('atom-bugs-ui')
+      return atom.packages.activatePackage('atom-bugs')
     })
   })
 

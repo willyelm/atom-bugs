@@ -1,0 +1,67 @@
+@import "variables";
+
+atom-bugs-console {
+  display: block;
+  pre {
+    padding: 0;
+    background-color: @pane-item-background-color;
+    border-radius: 0;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+    max-height: 200px;
+  }
+  input {
+    background-color: rgba(0,0,0,.26);
+    border: 0;
+    width: 100%;
+  }
+  .bugs-label{
+    border-radius: 2px;
+    padding: 1px 4px;
+    margin-right: 4px;
+    text-shadow: 0 0 1px rgba(0,0,0,.4);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset;
+    &.bugs-label-info {
+      color: @text-color-selected;
+      background-color: @accent-color;
+    }
+    &.bugs-label-error {
+      color: @text-color-selected;
+      background-color: @text-color-error;
+    }
+    &.bugs-label-string {
+      color: @text-color-selected;
+      background-color: #E09B9B;
+    }
+    &.bugs-label-object {
+      color: @text-color-selected;
+      background-color: #F2DE9B;
+    }
+    &.bugs-label-boolean {
+      color: @text-color-selected;
+      background-color: #BAA7C7;
+    }
+    &.bugs-label-number,
+    &.bugs-label-trace {
+      color: @text-color-selected;
+      background-color: #9AB7D8;
+    }
+    &.bugs-label-function {
+      color: @text-color-selected;
+      background-color: #ACC8A7;
+    }
+  }
+  .bugs-line,
+  input {
+    padding: 5px;
+    border-top: 1px solid @pane-item-border-color;
+    &:first-child {
+      &:not(:last-child) {
+        border-top: 0;
+      }
+    }
+  }
+}

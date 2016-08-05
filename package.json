@@ -5,7 +5,12 @@
   "keywords": [
     "javascript",
     "debugger",
-    "node"
+    "debug",
+    "chrome",
+    "willyelm",
+    "node",
+    "breakpoint",
+    "console"
   ],
   "license": "MIT",
   "repository": "https://github.com/willyelm/atom-bugs",
@@ -15,13 +20,11 @@
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
+    "chromedriver": "^2.22.2",
+    "selenium-webdriver": "^2.53.3",
     "standard": "^7.1.2"
   },
   "standard": {
     "parser": "babel-eslint"
-  },
-  "dependencies": {
-    "chromedriver": "^2.22.1",
-    "selenium-webdriver": "^2.53.3"
   }
 }

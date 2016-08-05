@@ -1,13 +1,16 @@
 // Atom Bugs: Test
-var title = 'View'
-var test = 1 + 2
+var title = `Basically the only thing happening
+  here is that when the class is created,
+  it creates a simple div`
 
 function Greet (msg) {
-  // do something with the msg
+  console.log(msg)
 }
 
+Greet(title)
+
 // Hello
-[
+var variables = [
   'Hello World',
   {
     title: 'Some Object'
@@ -18,12 +21,8 @@ function Greet (msg) {
   123123,
   function () {
     console.log('hello')
-  }
-]
-.forEach((m) => {
+  }]
+
+variables.forEach((m) => {
   Greet(m)
 })
-
-console.log(`Basically the only thing happening
-  here is that when the ${title} class is created,
-  it creates a simple div ${test}`)
