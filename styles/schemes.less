@@ -3,6 +3,50 @@
 atom-bugs-schemes{
   display: block;
   margin: -10px;
+  .bugs-config-group {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .bugs-config-name {
+      float: left;
+      width: 30%;
+      padding: 5px 10px;
+      text-align: right;
+    }
+    .bugs-config-value {
+      float: left;
+      width: 70%;
+    }
+    .bugs-config-object {
+      position: relative;
+      display: table;
+      border-collapse: separate;
+      .input-group {
+        display: table-cell;
+        width: 100%;
+        input {
+          float: left;
+          width: 50%;
+          &:first-child,
+          &:last-child {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+          }
+        }
+      }
+      .input-group input:last-child:not(:first-child),
+      .input-group-btn .btn:first-child{
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+      .input-group-btn {
+        float: right;
+        display: table-cell;
+      }
+    }
+  }
   .atom-bugs-project-selector {
     padding: 10px;
     .form-control {
@@ -34,21 +78,32 @@ atom-bugs-schemes{
     background-color: transparent;
     border-color: rgba(0,0,0, .2);
   }
+  .form-group {
+    margin-bottom: 5px;
+  }
   .form-control {
     background-color: @input-background-color;
     border-radius: @component-border-radius;
     color: @text-color-highlight;
-    border: 1px solid @input-border-color;
+    border: 1px solid @button-border-color;
+    height: 26px;
     &:focus{
       background-color: @input-background-color-focus;
       border-color: @accent-color;
       box-shadow: none;
     }
+    &[readonly] {
+      background-color: @input-background-color!important;
+      border-color: @input-border-color!important;
+      opacity: .65;
+    }
     &::-webkit-input-placeholder {
-      color: rgba(255,255,255,.2)
+      color: @text-color-faded
     }
   }
   form {
-    margin: 0 3em;
+    padding: 0 3em;
+    max-height: 340px;
+    overflow: auto;
   }
 }
