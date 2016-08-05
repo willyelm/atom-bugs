@@ -15,7 +15,11 @@
         "placeholder": "Use port number to run the process. Ex. 5800"
       },
       "env": {
-        "type": "array",
+        "type": "object",
+        "title": "Enviroment Variables"
+      },
+      "arguments": {
+        "type": "list",
         "title": "Enviroment Variables"
       }
     }
@@ -40,7 +44,11 @@
         "title": "Script File Path"
       },
       "env": {
-        "type": "array",
+        "type": "object",
+        "title": "Enviroment Variables"
+      },
+      "arguments": {
+        "type": "list",
         "title": "Enviroment Variables"
       }
     }
