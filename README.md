@@ -1,3 +1,6 @@
+[![apm](https://img.shields.io/apm/v/atom-bugs.svg?style=flat-square)](https://atom.io/packages/atom-bugs)
+[![apm](https://img.shields.io/apm/l/atom-bugs.svg?style=flat-square)](https://github.com/willyelm/atom-bug/blob/master/LICENSE.md)
+
 Atom Bugs
 ---
 `Atom Bugs` is a super simple Javascript debugger for Atom
