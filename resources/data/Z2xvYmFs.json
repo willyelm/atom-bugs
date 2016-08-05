@@ -23,7 +23,7 @@
         "title": "Enviroment Variables"
       },
       "arguments": {
-        "type": "list",,
+        "type": "list",
         "placeholder": "Ex. --test=123",
         "title": "Arguments"
       }
