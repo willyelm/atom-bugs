@@ -1,4 +1,4 @@
-# [v1.0.0](https://github.com/willyelm/atom-bugs/releases/tag/v0.3.0) (2016-07-05)
+# [v0.9.1](https://github.com/willyelm/atom-bugs/releases/tag/v0.3.0) (2016-07-05)
 
 ### Features
 
