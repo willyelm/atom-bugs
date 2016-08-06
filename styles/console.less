@@ -22,7 +22,7 @@ atom-bugs-console {
     padding: 1px 4px;
     margin-right: 4px;
     text-shadow: 0 0 1px rgba(0,0,0,.4);
-    box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2) inset;
     &.bugs-label-info {
       color: @text-color-selected;
       background-color: @accent-color;
@@ -33,28 +33,29 @@ atom-bugs-console {
     }
     &.bugs-label-string {
       color: @text-color-selected;
-      background-color: #E09B9B;
+      background-color: #d77e7e;
     }
     &.bugs-label-object {
       color: @text-color-selected;
-      background-color: #F2DE9B;
+      background-color: #eec94d;
     }
     &.bugs-label-boolean {
       color: @text-color-selected;
-      background-color: #BAA7C7;
+      background-color: #bd97d6;
     }
     &.bugs-label-number,
     &.bugs-label-trace {
       color: @text-color-selected;
-      background-color: #9AB7D8;
+      background-color: #7ea7d6;
     }
     &.bugs-label-function {
       color: @text-color-selected;
-      background-color: #ACC8A7;
+      background-color: #92c488;
     }
   }
   .bugs-line {
     padding: 5px;
+    line-height: 1.8;
     white-space: pre-wrap;
     border-top: 1px solid @pane-item-border-color;
     &:first-child {
