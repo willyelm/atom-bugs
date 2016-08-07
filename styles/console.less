@@ -2,20 +2,34 @@
 
 atom-bugs-console {
   display: block;
-  pre {
+  border-bottom: 1px solid @pane-item-border-color;
+  position: relative;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  atom-bugs-output,
+  atom-bugs-debug {
+    float: left;
+    overflow: auto;
+    height: 200px;
+    box-sizing: border-box;
     padding: 0;
+  }
+  atom-bugs-output {
+    width: 80%;
     background-color: @pane-item-background-color;
     border-radius: 0;
-    -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -o-user-select: text;
-    user-select: text;
-    max-height: 200px;
+    position: relative;
   }
-  input {
-    border-radius: 0!important;
-    width: 100%;
+  atom-bugs-debug {
+    width: 20%;
+    border-right: 1px solid @pane-item-border-color;
+  }
+  atom-bugs-lines {
+    display: block;
+    margin-bottom: 26px;
   }
   .bugs-label{
     border-radius: 2px;
@@ -59,9 +73,7 @@ atom-bugs-console {
     white-space: pre-wrap;
     border-top: 1px solid @pane-item-border-color;
     &:first-child {
-      &:not(:last-child) {
-        border-top: 0;
-      }
+      border-top: 0;
     }
   }
 }

@@ -1,9 +1,5 @@
 // Atom Bugs: Test
-var title = `This package is a integrated client of
-  NodeJS Debugger which uses the V8 Debugging Protocol,
-  in this first version it works for NodeJS applications
-  only. but I am looking forward to enable browser
-  debugging.`
+var title = 'Hey there this is Atom Bugs'
 
 function Greet (msg) {
   console.log(msg)

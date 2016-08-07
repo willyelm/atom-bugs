@@ -83,6 +83,16 @@
     "title": "Chrome",
     "icon": "bugs-icon-chrome",
     "fields": {
+      "target": {
+        "type": "text",
+        "placeholder": "Chrome application target. Ex. /Applications/Google Chrome.app",
+        "title": "Chrome Target"
+      },
+      "path": {
+        "type": "text",
+        "placeholder": "Where the files are server from. Ex. /project/publi_html",
+        "title": "Sources Path"
+      },
       "url": {
         "type": "text",
         "placeholder": "Browser url to load from. Ex. http://localhost:3000",
