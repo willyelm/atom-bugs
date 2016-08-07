@@ -1,6 +1,6 @@
 {
-  "use": "currentFile",
   "currentFile": {
+    "selected": true,
     "title": "Current File",
     "icon": "bugs-icon-file-code-o",
     "fields": {
@@ -16,10 +16,6 @@
       },
       "env": {
         "type": "object",
-        "placeholder": {
-          "name": "name",
-          "value": "value"
-        },
         "title": "Enviroment Variables"
       },
       "arguments": {
@@ -30,6 +26,7 @@
     }
   },
   "workspace": {
+    "selected": false,
     "title": "Workspace",
     "icon": "bugs-icon-flask",
     "fields": {
@@ -50,10 +47,6 @@
       },
       "env": {
         "type": "object",
-        "placeholder": {
-          "name": "name",
-          "value": "value"
-        },
         "title": "Enviroment Variables"
       },
       "arguments": {
@@ -64,6 +57,7 @@
     }
   },
   "remote": {
+    "selected": false,
     "title": "Remote",
     "icon": "bugs-icon-wifi",
     "fields": {
@@ -80,13 +74,15 @@
     }
   },
   "chrome": {
-    "title": "Chrome",
+    "selected": false,
+    "title": "Google Chrome",
     "icon": "bugs-icon-chrome",
     "fields": {
       "target": {
         "type": "text",
         "placeholder": "Chrome application target. Ex. /Applications/Google Chrome.app",
-        "title": "Chrome Target"
+        "title": "Chrome Target",
+        "value": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
       },
       "path": {
         "type": "text",
@@ -97,6 +93,13 @@
         "type": "text",
         "placeholder": "Browser url to load from. Ex. http://localhost:3000",
         "title": "Browser URL"
+      },
+      "sourceMaps": {
+        "type": "text",
+        "optional": true,
+        "active": false,
+        "placeholder": "Sourcemap URL",
+        "title": "Use Sourcemaps"
       }
     }
   }

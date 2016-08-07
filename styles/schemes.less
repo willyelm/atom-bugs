@@ -1,7 +1,7 @@
 @import "variables";
 
 atom-bugs-schemes{
-  display: block;
+  display: block!important;
   margin: -10px;
   .bugs-config-group {
     &:after {
@@ -80,6 +80,18 @@ atom-bugs-schemes{
   }
   .form-group {
     margin-bottom: 5px;
+  }
+  .form-control,
+  .setting-title,
+  .bugs-config-name {
+    font-size: @font-size!important;
+  }
+  .checkbox {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .bugs-config-name {
+    margin-bottom: 0;
   }
   form {
     padding: 0 3em;

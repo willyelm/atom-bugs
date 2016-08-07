@@ -7,8 +7,11 @@
     "javascript",
     "debugger",
     "debug",
+    "atom",
+    "repl",
     "bugs",
     "chrome",
+    "browser",
     "willyelm",
     "node",
     "breakpoint",
@@ -30,5 +33,8 @@
   },
   "standard": {
     "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "lodash": "^4.14.1"
   }
 }
