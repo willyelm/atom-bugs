@@ -19,8 +19,8 @@ atom-bugs-overlay {
     -o-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     background-color: @atom-bugs-header-color;
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     position:absolute;
     z-index: 1; // -1 to be below parent
     top: 1px;
@@ -32,27 +32,29 @@ atom-bugs-overlay {
   atom-bugs-inspector-body {
     font-size: 90%;
   }
+  atom-bugs-inspector-header {
+    background-color: @atom-bugs-header-color;
+    border-radius: 3px 3px 0 0;
+  }
+  atom-bugs-inspector-body {
+    overflow: auto;
+    max-width: 320px;
+    max-height: 240px;
+  }
 }
 
 atom-bugs-inspector {
   display: block;
-  box-shadow: 0 2px 4px 2px rgba(0,0,0,.1);
+  box-shadow: 0 2px 3px 2px rgba(0,0,0,.05);
   border-radius: 3px;
   atom-bugs-inspector-header,
   atom-bugs-inspector-body {
     padding: 7px;
     display: block;
   }
-  atom-bugs-inspector-header {
-    background-color: @atom-bugs-header-color;
-    border-radius: 3px 3px 0 0;
-  }
   atom-bugs-inspector-body {
     border-top: 1px solid @button-border-color;
     padding: 7px;
     white-space: pre;
-    overflow: auto;
-    max-width: 320px;
-    max-height: 240px;
   }
 }
