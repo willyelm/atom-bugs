@@ -1,5 +1,7 @@
 @import "variables";
 
+@atom-bugs-header-color: lighten(@button-background-color, 5%);
+
 atom-bugs-overlay {
   background-color: @button-background-color;
   border: 1px solid @button-border-color;
@@ -7,8 +9,8 @@ atom-bugs-overlay {
   margin-left: -30px;
   margin-top: 7px;
   display: block;
-  min-width: 200px;
-  max-width: 600px;
+  min-width: 160px;
+  max-width: 320px;
   &:before {
     content: '';
     transform: rotate(135deg);
@@ -16,7 +18,7 @@ atom-bugs-overlay {
     -webkit-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
-    background-color: @button-background-color;
+    background-color: @atom-bugs-header-color;
     width: 13px;
     height: 13px;
     position:absolute;
@@ -34,15 +36,23 @@ atom-bugs-overlay {
 
 atom-bugs-inspector {
   display: block;
+  box-shadow: 0 2px 4px 2px rgba(0,0,0,.1);
+  border-radius: 3px;
   atom-bugs-inspector-header,
   atom-bugs-inspector-body {
     padding: 7px;
     display: block;
   }
-  // atom-bugs-inspector-header {}
+  atom-bugs-inspector-header {
+    background-color: @atom-bugs-header-color;
+    border-radius: 3px 3px 0 0;
+  }
   atom-bugs-inspector-body {
     border-top: 1px solid @button-border-color;
     padding: 7px;
-    white-space: pre-wrap;
+    white-space: pre;
+    overflow: auto;
+    max-width: 320px;
+    max-height: 240px;
   }
 }

@@ -109,11 +109,12 @@ atom-bugs-panel {
 }
 
 .bugs-label{
-  border-radius: 2px;
-  padding: 1px 4px;
+  border-radius: 3px;
+  padding: 2px 4px;
   margin-right: 4px;
   text-shadow: 0 0 1px rgba(0,0,0,.4);
-  box-shadow: 0 0 0 1px rgba(0,0,0,.6) inset;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6) inset,
+              0 2px 0 rgba(255,255,255,.1) inset;
   &.bugs-label-info {
     color: @text-color-selected;
     background-color: @accent-color;
@@ -124,7 +125,7 @@ atom-bugs-panel {
   }
   &.bugs-label-string {
     color: @text-color-selected;
-    background-color: #d77e7e;
+    background-color: #cd4949;
   }
   &.bugs-label-object {
     color: @text-color-selected;
@@ -132,19 +133,19 @@ atom-bugs-panel {
   }
   &.bugs-label-boolean {
     color: @text-color-selected;
-    background-color: #bd97d6;
+    background-color: #c368ba;
   }
   &.bugs-label-number {
     color: @text-color-selected;
-    background-color: #7ea7d6;
+    background-color: #5693bf;
   }
   &.bugs-label-function {
     color: @text-color-selected;
-    background-color: #92c488;
+    background-color: #549f79;
   }
   &.bugs-label-undefined {
     color: @text-color-selected;
-    background-color: #a2a2a2;
+    background-color: #626a71;
   }
 }
 .bugs-line {
