@@ -68,9 +68,10 @@ atom-bugs-panel {
       }
     }
     &[disabled] {
-      &:after,
-      &:before {
-        opacity: .65;
+      background-color: lighten(@button-background-color, 10%);
+      opacity: 1;
+      &:after {
+        border-left-color: lighten(@button-background-color, 10%);
       }
     }
     & + .btn {
@@ -116,9 +117,8 @@ atom-bugs-panel {
   border-radius: 3px;
   padding: 2px 4px;
   margin-right: 4px;
-  text-shadow: 0 0 1px rgba(0,0,0,.8);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65) inset,
-              0 2px 0 rgba(255,255,255,.1) inset;
+  text-shadow: 0 0 .01em rgba(0, 0, 0, .7);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65) inset;
   &.bugs-label-info {
     color: @text-color-selected;
     background-color: @accent-color;
@@ -129,29 +129,26 @@ atom-bugs-panel {
   }
   &.bugs-label-string {
     color: @text-color-selected;
-    background-color: #cd4949;
+    background-color: @hue-4;
   }
   &.bugs-label-object,
   &.bugs-label-array,
   &.bugs-label-date {
     color: @text-color-selected;
-    background-color: #d2ad6c;
+    background-color: @hue-6-2;
   }
-  &.bugs-label-boolean {
-    color: @text-color-selected;
-    background-color: #c368ba;
-  }
+  &.bugs-label-boolean,
   &.bugs-label-number {
     color: @text-color-selected;
-    background-color: #5693bf;
+    background-color: @hue-6;
   }
   &.bugs-label-function {
     color: @text-color-selected;
-    background-color: #549f79;
+    background-color: @hue-2;
   }
   &.bugs-label-undefined {
     color: @text-color-selected;
-    background-color: #939aa1;
+    background-color: @mono-2;
   }
 }
 .bugs-line {

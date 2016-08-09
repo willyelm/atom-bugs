@@ -13,7 +13,6 @@ atom-bugs-console {
   atom-bugs-output,
   atom-bugs-lines {
     float: left;
-    overflow: auto;
     box-sizing: border-box;
     padding: 0;
     height: 160px;
@@ -32,6 +31,8 @@ atom-bugs-console {
   atom-bugs-debug {
     width: 35%;
     border-right: 1px solid @pane-item-border-color;
+    overflow: auto;
+    z-index: 1001;
     .btn {
       width: 100%;
       border-radius: 0;
@@ -47,6 +48,8 @@ atom-bugs-console {
     width: 100%;
     overflow: auto;
     height: 134px;
+    overflow: auto;
+    z-index: 1000;
   }
   .atom-bugs-resizer {
     position: absolute;
