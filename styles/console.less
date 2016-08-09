@@ -9,13 +9,14 @@ atom-bugs-console {
     display: table;
     clear: both;
   }
+  atom-bugs-debug,
   atom-bugs-output,
-  atom-bugs-debug {
+  atom-bugs-lines {
     float: left;
     overflow: auto;
-    height: 200px;
     box-sizing: border-box;
     padding: 0;
+    height: 160px;
   }
   atom-bugs-output {
     width: 65%;
@@ -43,7 +44,17 @@ atom-bugs-console {
   }
   atom-bugs-lines {
     display: block;
-    height: 174px;
+    width: 100%;
     overflow: auto;
+    height: 134px;
+  }
+  .atom-bugs-resizer {
+    position: absolute;
+    z-index: 2;
+    height: 3px;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    cursor: row-resize;
   }
 }

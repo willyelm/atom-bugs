@@ -3,11 +3,11 @@
 @atom-bugs-header-color: lighten(@button-background-color, 5%);
 
 atom-bugs-overlay {
-  background-color: @button-background-color;
+  background-color: @atom-bugs-header-color;
   border: 1px solid @button-border-color;
   border-radius: 3px;
   margin-left: -30px;
-  margin-top: 7px;
+  margin-top: 8px;
   display: block;
   min-width: 160px;
   max-width: 320px;
@@ -23,8 +23,8 @@ atom-bugs-overlay {
     height: 12px;
     position:absolute;
     z-index: 1; // -1 to be below parent
-    top: 1px;
-    left: -15px;
+    top: 2px;
+    left: 10px;
     border-radius: 0 0 0 3px;
     border-bottom: 1px solid @button-border-color;
     border-left: 1px solid @button-border-color;
@@ -37,9 +37,9 @@ atom-bugs-overlay {
     border-radius: 3px 3px 0 0;
   }
   atom-bugs-inspector-body {
-    overflow: auto;
+    background-color: @button-background-color;
     max-width: 320px;
-    max-height: 240px;
+    overflow: auto;
   }
 }
 
@@ -54,7 +54,31 @@ atom-bugs-inspector {
   }
   atom-bugs-inspector-body {
     border-top: 1px solid @button-border-color;
-    padding: 7px;
-    white-space: pre;
+    // white-space: pre;
+    .bugs-label {
+      padding: 1px 4px;
+    }
+  }
+  atom-bugs-inspector-property{
+    border-top: 1px solid @button-border-color;
+    display: block;
+    margin: 0 -7px;
+    padding: 4px 7px;
+    i {
+      color: @accent-color;
+      font-size: 120%;
+      margin-left: 4px;
+    }
+    &:first-child:not(.hide){
+      margin-top: -7px;
+      border-top: 0;
+    }
+    &:not(.hide):last-child{
+      margin-bottom: -7px;
+    }
+    atom-bugs-inspector-property {
+      margin: 0 -7px!important;
+      padding-left: 21px;
+    }
   }
 }
