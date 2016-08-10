@@ -45,6 +45,13 @@
         "placeholder": "Script path. Ex. /project/file.js",
         "title": "Script File Path"
       },
+      "watch": {
+        "type": "text",
+        "optional": true,
+        "active": false,
+        "placeholder": "Path. Ex. /project",
+        "title": "Watch Files"
+      },
       "env": {
         "type": "object",
         "title": "Enviroment Variables"

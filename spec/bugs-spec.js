@@ -7,7 +7,6 @@ describe('Atom Bugs', function () {
       return atom.packages.activatePackage('atom-bugs')
     })
   })
-
   it('allows the font size to be set via config', function () {
     // expect(document.documentElement.style.fontSize).toBe('')
     // atom.config.set('atom-bugs-ui.fontSize', '10')

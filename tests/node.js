@@ -2,11 +2,13 @@
 function HelloWorld () {
   this.message = 'bye'
 }
+
 class Another {
   constructor () {
     this.hello = 'my'
   }
 }
+
 class MyClass extends Another {
   constructor () {
     super()
@@ -25,6 +27,7 @@ class MyClass extends Another {
     }
   }
 }
+
 let test = Object.create(HelloWorld)
 let test2 = new HelloWorld()
 let ref = test2
