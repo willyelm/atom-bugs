@@ -33,7 +33,7 @@ let test2 = new HelloWorld()
 let ref = test2
 let object = new Another()
 let object2 = new MyClass()
-var project = require('./node2')
+var project = require('./dependency')
 let testString = 'Hello World Hello'
 let textObject = {
   title: 'Some Object'
