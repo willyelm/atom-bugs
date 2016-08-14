@@ -9,21 +9,23 @@ atom-bugs-console {
     display: table;
     clear: both;
   }
-  atom-bugs-debug,
+  atom-bugs-stack,
   atom-bugs-output,
+  atom-bugs-break,
   atom-bugs-lines {
     box-sizing: border-box;
     padding: 0;
   }
-  atom-bugs-debug,
-  atom-bugs-output {
+  atom-bugs-stack,
+  atom-bugs-output,
+  atom-bugs-break {
     height: 160px;
     position: relative;
     background-color: @pane-item-background-color;
     float: left;
   }
   atom-bugs-output {
-    width: 65%;
+    width: 50%;
     background-color: @pane-item-background-color;
     border-radius: 0;
     position: relative;
@@ -33,18 +35,35 @@ atom-bugs-console {
       bottom: 0;
     }
   }
-  atom-bugs-debug {
-    width: 35%;
-    border-right: 1px solid @pane-item-border-color;
+  atom-bugs-stack,
+  atom-bugs-break {
+    width: 25%;
     overflow: auto;
     .btn {
       width: 100%;
+      line-height: 1.45;
+      padding: 3px 7px;
       border-radius: 0;
       border-right: 0;
       border-left: 0;
       &:first-child{
         border-top: 0;
       }
+    }
+  }
+  atom-bugs-stack {
+    border-right: 1px solid @pane-item-border-color;
+  }
+  atom-bugs-break {
+    border-left: 1px solid @pane-item-border-color;
+    i {
+      line-height: 1.45;
+    }
+    .bugs-icon-circle {
+      color: @accent-color;
+    }
+    .bugs-icon-ban {
+      color: @hue-5-2;
     }
   }
   atom-bugs-lines {

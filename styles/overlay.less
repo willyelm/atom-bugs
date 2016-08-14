@@ -1,6 +1,7 @@
 @import "variables";
 
-@atom-bugs-header-color: lighten(@button-background-color, 5%);
+@atom-bugs-header-color: lighten(@button-background-color, 8%);
+@atom-bugs-body-color: lighten(@button-background-color, 2%);
 
 atom-bugs-overlay {
   background-color: @atom-bugs-header-color;
@@ -11,6 +12,7 @@ atom-bugs-overlay {
   display: block;
   min-width: 160px;
   max-width: 320px;
+  font-size: 90%;
   &:before {
     content: '';
     transform: rotate(135deg);
@@ -29,15 +31,12 @@ atom-bugs-overlay {
     border-bottom: 1px solid @button-border-color;
     border-left: 1px solid @button-border-color;
   }
-  atom-bugs-inspector-body {
-    font-size: 90%;
-  }
   atom-bugs-inspector-header {
     background-color: @atom-bugs-header-color;
     border-radius: 3px 3px 0 0;
   }
   atom-bugs-inspector-body {
-    background-color: @button-background-color;
+    background-color: @atom-bugs-body-color;
     max-width: 320px;
     overflow: auto;
   }
@@ -45,7 +44,7 @@ atom-bugs-overlay {
 
 atom-bugs-inspector {
   display: block;
-  box-shadow: 0 2px 3px 2px rgba(0,0,0,.05);
+  box-shadow: 0 1px 2px 1px rgba(0,0,0,.4);
   border-radius: 3px;
   atom-bugs-inspector-header,
   atom-bugs-inspector-body {
@@ -63,7 +62,7 @@ atom-bugs-inspector {
     border-top: 1px solid @button-border-color;
     display: block;
     margin: 0 -7px;
-    padding: 4px 7px;
+    padding: 3px 7px;
     i {
       color: @accent-color;
       font-size: 120%;
