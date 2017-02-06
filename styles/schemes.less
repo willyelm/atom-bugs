@@ -3,6 +3,9 @@
 atom-bugs-schemes{
   display: block!important;
   margin: -10px;
+  [class*="icon-"]:before {
+    font-size: inherit;
+  }
   .bugs-config-group {
     &:after {
       content: "";
@@ -44,6 +47,9 @@ atom-bugs-schemes{
       .input-group-btn {
         float: right;
         display: table-cell;
+        .btn {
+          height: 2.3rem;
+        }
       }
     }
   }
@@ -84,7 +90,7 @@ atom-bugs-schemes{
   .form-control,
   .setting-title,
   .bugs-config-name {
-    font-size: @font-size!important;
+    // font-size: @font-size!important;
   }
   .checkbox {
     margin-top: 0px;
