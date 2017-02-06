@@ -1,3 +1,4 @@
 node_modules
 resources/data/*
 !resources/data/schemes.json
+npm-debug*
