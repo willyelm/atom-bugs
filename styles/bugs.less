@@ -1,11 +1,5 @@
 @import "variables";
 
-[title-bar-style="hidden-inset"]{
-  atom-bugs-panel{
-    padding-left: 70px;
-  }
-}
-
 @keyframes bugs-animate-spin {
   100%{
     transform: rotate(360deg);
@@ -56,9 +50,8 @@ atom-bugs-panel {
       font-family: 'bugs'
     }
   }
-  box-shadow: 0 -1px 0 0 rgba(0,0,0, .2) inset;
   .btn-group {
-    padding: 0.45rem;
+    padding: .45rem .5rem;
     &:first-child {
       padding-right: 0px;
     }
@@ -180,7 +173,6 @@ atom-bugs-console {
     border-radius: @component-border-radius;
     color: @text-color-highlight;
     border: 1px solid @input-border-color;
-    height: 26px!important;
     &:focus{
       background-color: @input-background-color-focus;
       border-color: @accent-color;
@@ -199,38 +191,35 @@ atom-bugs-console {
 }
 
 atom-text-editor {
-  &,
-  &::shadow{
-    // .bugs-evaluate-expression {
-    //   .region{
-    //     background-color: @accent-color;
-    //     color: #FFF;
-    //     padding: 10px;
-    //   }
-    // }
-    .bugs-line-breakpoint{
-      z-index: 1;
-      color: lighten(@accent-color, 15%);
-      &.cursor-line {
-        color: inherit;
-      }
-      &:after {
-        content: '';
-        background-color: @accent-color;
-        background-repeat: no-repeat;
-        background-position: center left;
-        background-size: 100% auto;
-        -webkit-mask-image: url(atom://atom-bugs/resources/images/breakpoint.svg);
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-position: top right;
-        -webkit-mask-size: cover;
-        position: absolute;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0.5em;
-        z-index: -1;
-      }
+  // .bugs-evaluate-expression {
+  //   .region{
+  //     background-color: @accent-color;
+  //     color: #FFF;
+  //     padding: 10px;
+  //   }
+  // }
+  .bugs-line-breakpoint{
+    z-index: 1;
+    color: lighten(@accent-color, 15%);
+    &.cursor-line {
+      color: inherit;
+    }
+    &:after {
+      content: '';
+      background-color: @accent-color;
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-size: 100% auto;
+      -webkit-mask-image: url(atom://atom-bugs/resources/images/breakpoint.svg);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: top right;
+      -webkit-mask-size: cover;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0.5em;
+      z-index: -1;
     }
   }
 }
