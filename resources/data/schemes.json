@@ -16,7 +16,7 @@
       },
       "env": {
         "type": "object",
-        "title": "Enviroment Variables"
+        "title": "Environment Variables"
       },
       "arguments": {
         "type": "list",
@@ -54,7 +54,7 @@
       },
       "env": {
         "type": "object",
-        "title": "Enviroment Variables"
+        "title": "Environment Variables"
       },
       "arguments": {
         "type": "list",
