@@ -36,7 +36,10 @@ let object2 = new MyClass()
 var project = require('./dependency')
 let testString = 'Hello World Hello'
 let textObject = {
-  title: 'Some Object'
+  title: 'Some Object',
+  test: {
+    title: 'Hello'
+  }
 }
 let testArray = ['1', '2', '3']
 let testDate = new Date()
