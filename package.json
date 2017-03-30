@@ -1,5 +1,5 @@
 {
-  "name": "atom-bugs",
+  "name": "atom-bugs-legacy",
   "version": "0.25.2",
   "author": "Williams Medina <williams.medinaa@gmail.com>",
   "description": "A Simple Javascript Debugger for Atom",
