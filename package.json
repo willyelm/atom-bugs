@@ -18,7 +18,7 @@
     "console"
   ],
   "license": "MIT",
-  "repository": "https://github.com/willyelm/atom-bugs",
+  "repository": "https://github.com/atom-bugs/atom-bugs",
   "main": "lib/main",
   "scripts": {
     "test": "http-server -a localhost -p 3000 -c-1 ./tests"
