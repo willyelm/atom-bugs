@@ -1,4 +1,4 @@
-This repository has been moved to [atom-bugs/atom-bugs](https://github.com/atom-bugs/atom-bugs)
+This repository has been moved to [willyelm/xatom-debug](https://github.com/willyelm/xatom-debug)
 
 [![apm](https://img.shields.io/apm/v/atom-bugs.svg?style=flat-square)](https://atom.io/packages/atom-bugs)
 [![standard](https://img.shields.io/badge/code%20style-standard-yellow.svg?style=flat-square)](http://standardjs.com/)
